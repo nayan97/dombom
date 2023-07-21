@@ -1,32 +1,60 @@
 
+//kyborad event
 
-const add = document.getElementById('add');
-const del = document.getElementById('del');
-const output = document.getElementById('data');
-const alts = document.getElementById('alts');
-const alte = document.getElementById('alte');
-
-
-let conut =0;
-let stopCount = '';
-
-add.onclick = () =>{
-    
-    stopCount =setInterval(() => {
-    conut++;
-    output.innerHTML= conut;
-    if( conut >= 10){
-       clearInterval(stopCount);
-        
-        alte.play();
-        conut = 0;
-    } else {
-       
-    }
+const input = document.querySelector('input');
+const button = document.querySelector('button');
+const h1 = document.querySelector('h1');
 
 
- }, 1000)
+
+
+button.onclick=() => {
+    console.log(input.value);
+   
+    h1.innerHTML = input.value
+} 
+
+
+input.onkeydown = () =>{
+    h1.innerHTML = input.value
 }
+
+// input.onkeyup = () =>{
+//     h1.innerHTML = input.value
+// }
+
+
+
+// conter code by mouse event
+
+// const add = document.getElementById('add');
+// const del = document.getElementById('del');
+// const output = document.getElementById('data');
+// const alts = document.getElementById('alts');
+// const alte = document.getElementById('alte');
+
+
+// let conut =0;
+// let stopCount = '';
+
+// add.onclick = () =>{
+    
+//     stopCount =setInterval(() => {
+//     conut++;
+//     output.innerHTML= conut;
+//     if( conut >= 10){
+//        clearInterval(stopCount);
+        
+//         alte.play();
+//         conut = 0;
+//         clearInterval(stopCount);
+//     } else {
+       
+//     }
+
+
+//  }, 1000)
+// }
 
 
 
